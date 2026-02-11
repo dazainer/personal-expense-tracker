@@ -207,18 +207,6 @@ expense-tracker-v2/
 
 ---
 
-## 📸 Screenshots
-
-### Dashboard
-![Dashboard Screenshot 1](<Screenshot 2026-02-10 at 10.15.43 PM.png>)
-![Dashboard Screenshot 2](<Screenshot 2026-02-10 at 10.15.53 PM.png>)
-### Expense Management
-![Expenses Screenshot](<Screenshot 2026-02-10 at 10.16.05 PM.png>)
-### Analytics
-![Analytics Screenshot 1](<Screenshot 2026-02-10 at 10.16.17 PM.png>)
-![Analytics Screenshot 2](<Screenshot 2026-02-10 at 10.16.23 PM.png>)
----
-
 ## 🤝 Contributing
 
 This is a personal learning project, but feedback and suggestions are welcome!
