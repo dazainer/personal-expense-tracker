@@ -47,8 +47,8 @@ app.use((err: Error, req: Request, res: Response, next: any) => {
   });
 });
 
-// Start server
-app.listen(PORT, () => {
+// Start server (bind to 0.0.0.0 so Railway can route traffic)
+app.listen(Number(PORT), '0.0.0.0', () => {
   console.log('');
   console.log('🚀 Expense Tracker API Server');
   console.log(`📡 Server running on http://localhost:${PORT}`);

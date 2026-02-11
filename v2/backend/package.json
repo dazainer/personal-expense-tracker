@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
-    "start": "node dist/index.js",
+    "start": "node dist/scripts/setupDatabase.js; node dist/index.js",
     "db:setup": "tsx src/scripts/setupDatabase.ts"
   },
   "keywords": ["expense-tracker", "rest-api", "typescript"],
