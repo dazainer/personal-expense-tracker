@@ -21,19 +21,19 @@ export default function Dashboard() {
 
   // Check for errors
   if (summaryError || trendsError || expensesError) {
+    const apiBase = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
     return (
       <div className="loading">
         <AlertCircle size={48} color="#FF6B6B" />
         <h2>Cannot connect to backend</h2>
-        <p>Make sure your backend server is running on port 3001</p>
-        <div style={{ marginTop: '20px', padding: '16px', background: '#FFF3CD', borderRadius: '8px', maxWidth: '500px' }}>
-          <p style={{ margin: 0, fontSize: '0.9rem' }}>
-            <strong>In your terminal, run:</strong><br />
-            <code style={{ background: '#000', color: '#0F0', padding: '4px 8px', borderRadius: '4px', display: 'inline-block', marginTop: '8px' }}>
-              cd backend && npm run dev
-            </code>
-          </p>
-        </div>
+        <p>App is trying to reach: <code style={{ fontSize: '0.85rem', wordBreak: 'break-all' }}>{apiBase}</code></p>
+        <p style={{ fontSize: '0.9rem', marginTop: '8px' }}>
+          {apiBase.startsWith('http://localhost') ? (
+            <>Local mode: run the backend with <code>cd backend && npm run dev</code></>
+          ) : (
+            <>Check that the backend is up and reachable (e.g. open {apiBase.replace('/api', '')}/health in your browser).</>
+          )}
+        </p>
       </div>
     );
   }
