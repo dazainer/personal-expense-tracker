@@ -49,7 +49,7 @@ function AppContent() {
   return (
     <div className="app">
       <header className="header">
-        <h1>💰 Expense Tracker</h1>
+        <h1>Expense Tracker</h1>
         <p className="subtitle">Track, analyze, and optimize your spending</p>
       </header>
       
